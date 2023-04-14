@@ -1,0 +1,10 @@
+Materias,Correlativas
+MatemáticaI,
+FisicaI,
+ProgramaciónI,
+MatemáticaII,MatemáticaI
+FisicaII,FisicaI
+ProgramaciónII,ProgramaciónI
+MatemáticaIII,MatemáticaI MatemáticaII
+FisicaIII,FisicaI FisicaII
+ProgramaciónIII,ProgramaciónI ProgramaciónII
