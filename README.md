@@ -1,7 +1,7 @@
 ### <em>Ejercicio Integrador Intermedio</em>
-# Validador de Correlativas
+# <b>Validador de Correlativas</b>
 
-> Consigna
+> ### Consigna
 
 implementar un programa que tome como
 argumento una lista de inscripciones, y escriba en un archivo otro con la misma cantidad de
@@ -14,16 +14,18 @@ Un ejemplo de salida:
 - Lucia Perez - Bases de datos I - No existe el/la alumno/a
 - Vanesa Sosa - Programación II - Rechazado
 
-### Se proponen los siguientes pasos:
+<p><a href="src\main\java\org\argPrograma\outputFiles\resultadoInscripciones.csv"/>Resultados De Inscripciones</a></p>
 
-1. Implementar el diseño en un proyecto Maven.
+<h2>Se proponen los siguientes pasos:</h2>
 
-2. Generar 2 tests para el método Inscripción#aprobada:
-  a. Una materia sin correlativas
-  b. Una materia con correlativas y que el alumno las tenga
-  c. Otra materia sin correlativas, y que el alumno no las tenga
+- Implementar el diseño en un proyecto Maven.
+
+- Generar 2 tests para el método Inscripción#aprobada:
+  - Una materia sin correlativas
+  - Una materia con correlativas y que el alumno las tenga
+  - Otra materia sin correlativas, y que el alumno no las tenga
   
-3. Finalmente implementar el programa, puede seguir el siguiente esquema:
+- Finalmente implementar el programa, puede seguir el siguiente esquema:
 
 ``` java
 public static void main(String[] args) {
@@ -41,6 +43,4 @@ alumnos DEBE usar los objetos que creo más arriba
 // Imprimir la línea, con el resultado si la inscripción está o no ok
 }
 ```
-
-<p><a href="src\main\java\org\argPrograma\outputFiles\resultadoInscripciones.csv"/>Resultados De Inscripciones</a></p>
 
