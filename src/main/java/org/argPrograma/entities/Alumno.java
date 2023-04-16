@@ -35,7 +35,7 @@ public class Alumno {
         return legajo;
     }
 
-    public void setLegajo(int legajo) {
+    public void setLegajo(Integer legajo) {
         this.legajo = legajo;
     }
 
