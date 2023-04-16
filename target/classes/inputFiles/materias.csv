@@ -1,0 +1,13 @@
+Materias,Correlativas
+MatemáticaI,
+FisicaI,
+ProgramaciónI,
+BasesDeDatosI
+MatemáticaII,MatemáticaI
+FisicaII,FisicaI
+ProgramaciónII,ProgramaciónI
+BasesDeDatosII,BasesDeDatosI
+MatemáticaIII,MatemáticaI MatemáticaII
+FisicaIII,FisicaI FisicaII
+ProgramaciónIII,ProgramaciónI ProgramaciónII
+BasesDeDatosIII,BasesDeDatosI BasesDeDatosII
