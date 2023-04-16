@@ -15,10 +15,10 @@ public class FilesService {
     public FilesService() {
     }
 
-    private final String pathInscripciones = "src\\main\\java\\org\\argPrograma\\inputFiles\\inscripciones.csv";
-    private final String pathMaterias = "src\\main\\java\\org\\argPrograma\\inputFiles\\materias.csv";
-    private final String pathAlumnos = "src\\main\\java\\org\\argPrograma\\inputFiles\\alumnos.csv";
-    private final String pathResultados = "src\\main\\java\\org\\argPrograma\\outputFiles\\resultadoInscripciones.csv";
+    private final String pathInscripciones = "src\\main\\resources\\inputFiles\\inscripciones.csv";
+    private final String pathMaterias = "src\\main\\resources\\inputFiles\\materias.csv";
+    private final String pathAlumnos = "src\\main\\resources\\inputFiles\\alumnos.csv";
+    private final String pathResultados = "src\\main\\resources\\outputFiles\\resultadoInscripciones.csv";
 
     public List<String> leerInscripciones() throws IOException {
         Path file = Paths.get(pathInscripciones);
