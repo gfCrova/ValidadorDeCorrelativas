@@ -1,14 +1,9 @@
 package org.argPrograma.services;
 
-import org.argPrograma.entities.Alumno;
 import org.argPrograma.entities.Inscripcion;
-import org.argPrograma.entities.InscripcionEnum;
-import org.argPrograma.entities.Materia;
 
-import java.io.File;
-import java.io.FileWriter;
+import java.io.BufferedWriter;
 import java.io.IOException;
-import java.io.PrintWriter;
 import java.nio.file.Files;
 import java.nio.file.Path;
 import java.nio.file.Paths;
@@ -41,6 +36,14 @@ public class FilesService {
     }
 
     public void guardarResultados(Inscripcion inscripcion) throws IOException {
-        Files.writeString(Paths.get(pathResultados), inscripcion.grabarArchivo() + "\n", StandardOpenOption.APPEND);
+        String grabarTexto = inscripcion.grabarArchivo();
+        Path leerPath = Paths.get(pathResultados);
+        String contenido = Files.readString(leerPath);
+
+        try(BufferedWriter writer = Files.newBufferedWriter(leerPath, StandardOpenOption.WRITE, StandardOpenOption.APPEND)){
+            writer.write(grabarTexto + "\n");
+        } catch (IOException e){
+            e.printStackTrace();
+        }
     }
 }

@@ -33,6 +33,23 @@ public class AlumnosService {
 
         Alumno alumno = new Alumno(nombre, legajo, matAprobadas);
         ArrayList<Alumno> alumnos = new ArrayList<>();
+        if(alumno.getNombre().equals("")) {
+            alumno.setNombre("No existe el/la alumno");
+        }else {
+            if(legajo <= 0 ) {
+                alumno.setLegajo(0);
+            } else {
+                if (matDeInscripcion.getNombre().equals("")) {
+                    int i = 0;
+                    while(i < matAprobadas.size()) {
+                        alumno.getMateriasAprobadas().get(i).setNombre("");
+                        i++;
+                    }
+                    matDeInscripcion.setNombre("");
+                    solicitud = null;
+                }
+            }
+        }
         alumnos.add(new Alumno(nombre, legajo));
 
         Inscripcion inscripcion = new Inscripcion(alumno, matDeInscripcion, solicitud);

@@ -1,6 +1,5 @@
 package org.argPrograma.services;
 
-import org.argPrograma.entities.InscripcionEnum;
 import org.argPrograma.entities.Materia;
 
 import java.io.IOException;
@@ -28,9 +27,12 @@ public class InscripcionService {
                 String alumno = linea.split(",")[0];
                 int legajo = Integer.parseInt(linea.split(",")[1]);
                 String materiaInscripcion = linea.split(",")[2];
-                System.out.println("ALUMNO: " + alumno + ". LEGAJO: " + legajo + ".");
-                System.out.println("Solicita inscribirse a: '" + materiaInscripcion + "'");
 
+                System.out.println("ALUMNO: " + alumno + ". LEGAJO: " + legajo + ". INSCRIPCIÓN A: '" + materiaInscripcion + "'");
+
+                if (materiaInscripcion.equals("")) {
+                    materiaInscripcion = "La materia no existe";
+                }
                 Materia matInscripcion = new Materia(materiaInscripcion);
                 correlativasService.buscarCorrelativas(materiaInscripcion);
 
